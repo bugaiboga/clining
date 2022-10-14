@@ -10,6 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" href="./css/grid.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
@@ -85,7 +90,9 @@
             <button class="btn c-white b-0 br-10">Заказать уборку</button>
           </div>
           <div class="col-6 main-content pl100 pt40 pr50 pb80">
-            <div class="circles df pa circles-aqua">
+            <div
+              class="main-circles-top circles df pa circles-aqua circles-column"
+            >
               <span class="circle br-1000"></span>
               <span class="circle br-1000"></span>
               <span class="circle br-1000"></span>
@@ -105,7 +112,9 @@
             <div class="main-image">
               <img src="./images/content/main-bg.png" alt="main-bg" />
             </div>
-            <div class="circles df pa circles-blue">
+            <div
+              class="main-circles-bottom circles df pa circles-blue circles-row"
+            >
               <span class="circle br-1000"></span>
               <span class="circle br-1000"></span>
               <span class="circle br-1000"></span>
@@ -147,7 +156,7 @@
                   src="./images/vectors/services-vector-1.svg"
                   alt=""
                 />
-                <h6 class="fs24 pt15">Уборка квартир</h6>
+                <h4 class="fs24 pt15">Уборка квартир</h4>
 
                 <ul class="services-item-list">
                   <li>
@@ -183,7 +192,7 @@
                   src="./images/vectors/services-vector-2.svg"
                   alt=""
                 />
-                <h6 class="fs24 pt15">Уборка коттеджей</h6>
+                <h4 class="fs24 pt15">Уборка коттеджей</h4>
                 <ul class="services-item-list">
                   <li>
                     <a class="df" href="#"
@@ -218,7 +227,7 @@
                   src="./images/vectors/services-vector-3.svg"
                   alt=""
                 />
-                <h6 class="fs24 pt15">Уборка офисов</h6>
+                <h4 class="fs24 pt15">Уборка офисов</h4>
                 <ul class="services-item-list">
                   <li>
                     <a class="df" href="#"
@@ -256,7 +265,7 @@
                   src="./images/vectors/services-vector-4.svg"
                   alt=""
                 />
-                <h6 class="fs24 pt15">Химчистка</h6>
+                <h4 class="fs24 pt15">Химчистка</h4>
                 <ul class="services-item-list">
                   <li>
                     <a class="df" href="#"
@@ -297,7 +306,7 @@
                   src="./images/vectors/services-vector-5.svg"
                   alt=""
                 />
-                <h6 class="fs24 pt15">Чистка бассейнов</h6>
+                <h4 class="fs24 pt15">Чистка бассейнов</h4>
                 <ul class="services-item-list">
                   <li>
                     <a class="df" href="#">
@@ -338,7 +347,7 @@
                   src="./images/vectors/services-vector-6.svg"
                   alt=""
                 />
-                <h6 class="fs24 pt15">Мойка фасадов</h6>
+                <h4 class="fs24 pt15">Мойка фасадов</h4>
                 <ul class="services-item-list">
                   <li>
                     <a class="df" href="#">
@@ -371,7 +380,358 @@
         </div>
       </div>
     </section>
+    <section class="pt100">
+      <div class="container">
+        <h4 class="title">
+          <span></span>
+          Калькулятор
+        </h4>
+        <h3 class="page-title fs48 pt25 pb50">Калькулятор стоимости</h3>
+        <div class="calculator-wrappeer br-10 pr10 pl40 pb40">
+          <form class="calculator" action="#">
+            <div class="row">
+              <fieldset class="col-4 tac">
+                <label class="db fs24" for="room-type-select"
+                  >Тип помещения
+                </label>
+                <select
+                  class="br-10 b-1 fs18"
+                  id="room-type-select"
+                  name="room-select"
+                >
+                  <option value="value1">Уборка квартир</option>
+                  <option value="value2">Уборка коттеджей</option>
+                  <option value="value3">Уборка офисов</option>
+                  <option value="value4">Химчистка</option>
+                  <option value="value5">Чистка бассейнов</option>
+                  <option value="value6">Мойка фасадов</option>
+                </select>
+              </fieldset>
+              <fieldset class="col-4 tac">
+                <label class="db fs24" for="cleaning-type-select"
+                  >Тип уборки
+                </label>
+                <select
+                  class="br-10 b-1 fs18"
+                  id="cleaning-type-select"
+                  name="cleaning-select"
+                >
+                  <option value="value1">Уборка квартир</option>
+                  <option value="value2">Уборка коттеджей</option>
+                  <option value="value3">Уборка офисов</option>
+                  <option value="value4">Химчистка</option>
+                  <option value="value5">Чистка бассейнов</option>
+                  <option value="value6">Мойка фасадов</option>
+                </select>
+              </fieldset>
+              <fieldset class="col-4 tac">
+                <label class="db fs24" for="room-size"
+                  >Площадь помещения
+                </label>
+                <input
+                  class="br-10 b-1 fs18"
+                  id="room-size"
+                  name="room-size"
+                  type="number"
+                  placeholder="( м² )"
+                />
+              </fieldset>
+            </div>
+            <div class="pt50">
+              <div class="row">
+                <div class="col-8">
+                  <ul class="calculator-list">
+                    <li class="row br-10 c-white align-items-center p10">
+                      <p class="col-4">Количество санузлов</p>
+                      <p class="col-5 tac">
+                        Один санузел входит в базовую стоимость
+                      </p>
+                      <div class="col-2 df align-items-center">
+                        <button class="br-1000 b-0 tac c-black">-</button>
+                        <b class="pr10 pl10 fs20">0</b>
+                        <button
+                          class="br-1000 b-0 tac c-black df align-items-center justify-content-center"
+                        >
+                          <p>+</p>
+                        </button>
+                      </div>
+                      <div class="col-1 df justify-content-end btn-info">
+                        <button class="br-1000 b-0 tac c-black">&#63;</button>
+                      </div>
+                    </li>
+                    <li class="row br-10 c-black align-items-center p10">
+                      <p class="col-4">Мойка окон</p>
+                      <p class="col-5 tac">от 250 ₽/шт</p>
+                      <div class="col-2 df align-items-center">
+                        <button class="br-1000 b-0 tac c-white">-</button>
+                        <b class="pr10 pl10 fs20">0</b>
+                        <button
+                          class="br-1000 b-0 tac c-white df align-items-center justify-content-center"
+                        >
+                          <p>+</p>
+                        </button>
+                      </div>
+                      <div class="col-1 df justify-content-end btn-info">
+                        <button class="br-1000 b-0 tac c-white">&#63;</button>
+                      </div>
+                    </li>
+                    <li
+                      class="row br-10 c-black align-items-center p10 disable pr"
+                    >
+                      <p class="col-11">
+                        Точную стоимость уточняйте у менеджера
+                      </p>
+                      <div class="col-1 df justify-content-end btn-info">
+                        <button class="br-1000 b-0 tac c-white">&#63;</button>
+                      </div>
+                    </li>
+                    <li class="row br-10 c-black align-items-center p10">
+                      <p class="col-4">Мойка окон</p>
+                      <p class="col-5 tac">от 250 ₽/шт</p>
+                      <div class="col-2 df align-items-center">
+                        <button class="br-1000 b-0 tac c-white">-</button>
+                        <b class="pr10 pl10 fs20">0</b>
+                        <button
+                          class="br-1000 b-0 tac c-white df align-items-center justify-content-center"
+                        >
+                          <p>+</p>
+                        </button>
+                      </div>
+                      <div class="col-1 df justify-content-end btn-info">
+                        <button class="br-1000 b-0 tac c-white">&#63;</button>
+                      </div>
+                    </li>
+                    <li class="row br-10 c-black align-items-center p10">
+                      <p class="col-4">Мойка окон</p>
+                      <p class="col-5 tac">от 250 ₽/шт</p>
+                      <div class="col-2 df align-items-center">
+                        <button class="br-1000 b-0 tac c-white">-</button>
+                        <b class="pr10 pl10 fs20">0</b>
+                        <button
+                          class="br-1000 b-0 tac c-white df align-items-center justify-content-center"
+                        >
+                          <p>+</p>
+                        </button>
+                      </div>
+                      <div class="col-1 df justify-content-end btn-info">
+                        <button class="br-1000 b-0 tac c-white">&#63;</button>
+                      </div>
+                    </li>
+                    <li class="row br-10 c-black align-items-center p10">
+                      <p class="col-4">Мойка окон</p>
+                      <p class="col-5 tac">от 250 ₽/шт</p>
+                      <div class="col-2 df align-items-center">
+                        <button class="br-1000 b-0 tac c-white">-</button>
+                        <b class="pr10 pl10 fs20">0</b>
+                        <button
+                          class="br-1000 b-0 tac c-white df align-items-center justify-content-center"
+                        >
+                          <p>+</p>
+                        </button>
+                      </div>
+                      <div class="col-1 df justify-content-end btn-info">
+                        <button class="br-1000 b-0 tac c-white">&#63;</button>
+                      </div>
+                    </li>
+                    <li class="row br-10 c-black align-items-center p10">
+                      <p class="col-4">Мойка окон</p>
+                      <p class="col-5 tac">от 250 ₽/шт</p>
+                      <div class="col-2 df align-items-center">
+                        <button class="br-1000 b-0 tac c-white">-</button>
+                        <b class="pr10 pl10 fs20">0</b>
+                        <button
+                          class="br-1000 b-0 tac c-white df align-items-center justify-content-center"
+                        >
+                          <p>+</p>
+                        </button>
+                      </div>
+                      <div class="col-1 df justify-content-end btn-info">
+                        <button class="br-1000 b-0 tac c-white">&#63;</button>
+                      </div>
+                    </li>
+                    <li class="row br-10 c-black align-items-center p10">
+                      <p class="col-4">Мойка окон</p>
+                      <p class="col-5 tac">от 250 ₽/шт</p>
+                      <div class="col-2 df align-items-center">
+                        <button class="br-1000 b-0 tac c-white">-</button>
+                        <b class="pr10 pl10 fs20">0</b>
+                        <button
+                          class="br-1000 b-0 tac c-white df align-items-center justify-content-center"
+                        >
+                          <p>+</p>
+                        </button>
+                      </div>
+                      <div class="col-1 df justify-content-end btn-info">
+                        <button class="br-1000 b-0 tac c-white">&#63;</button>
+                      </div>
+                    </li>
+                    <li class="row br-10 c-black align-items-center p10">
+                      <p class="col-4">Мойка окон</p>
+                      <p class="col-5 tac">от 250 ₽/шт</p>
+                      <div class="col-2 df align-items-center">
+                        <button class="br-1000 b-0 tac c-white">-</button>
+                        <b class="pr10 pl10 fs20">0</b>
+                        <button
+                          class="br-1000 b-0 tac c-white df align-items-center justify-content-center"
+                        >
+                          <p>+</p>
+                        </button>
+                      </div>
+                      <div class="col-1 df justify-content-end btn-info">
+                        <button class="br-1000 b-0 tac c-white">&#63;</button>
+                      </div>
+                    </li>
+                    <li class="row br-10 c-black align-items-center p10">
+                      <p class="col-4">Мойка окон</p>
+                      <p class="col-5 tac">от 250 ₽/шт</p>
+                      <div class="col-2 df align-items-center">
+                        <button class="br-1000 b-0 tac c-white">-</button>
+                        <b class="pr10 pl10 fs20">0</b>
+                        <button
+                          class="br-1000 b-0 tac c-white df align-items-center justify-content-center"
+                        >
+                          <p>+</p>
+                        </button>
+                      </div>
+                      <div class="col-1 df justify-content-end btn-info">
+                        <button class="br-1000 b-0 tac c-white">&#63;</button>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="row tac justify-content-md-center">
+                    <p class="calculator-list-subtitle col-9 fs20">
+                      Закажите уборку помещения и узнайте о вашей персональной
+                      скидке
+                    </p>
+                  </div>
+                </div>
+                <div class="calculator-result col-4">
+                  <h5 class="tac pt20 pb20 c-white fs24">Стоимость услуг</h5>
+                  <div class="calculator-result-content">
+                    <ul>
+                      <li class="df align-items-center justify-content-between">
+                        <p>Химчистка матраса 1 мест</p>
+                        <p>1 шт</p>
+                        <p>1 000₽</p>
+                      </li>
+                      <li class="df align-items-center justify-content-between">
+                        <p>Химчистка матраса 1 мест</p>
+                        <p>1 шт</p>
+                        <p>1 000₽</p>
+                      </li>
+                      <li class="df align-items-center justify-content-between">
+                        <p>Химчистка матраса 1 мест</p>
+                        <p>1 шт</p>
+                        <p>1 000₽</p>
+                      </li>
+                      <li class="df align-items-center justify-content-between">
+                        <p>Химчистка матраса 1 мест</p>
+                        <p>1 шт</p>
+                        <p>1 000₽</p>
+                      </li>
+                      <li
+                        class="df calculator-result-count align-items-center justify-content-between fs18"
+                      >
+                        <p>Итого</p>
+                        <b>1 000₽</b>
+                      </li>
+                    </ul>
+                    <p class="fs18 p30 tac">
+                      Для заказа услуги, заполните форму ниже
+                    </p>
+                    <fieldset>
+                      <input class="fs18 br-10" type="text" placeholder="Имя" />
+                      <input
+                        class="fs18 br-10"
+                        type="number"
+                        placeholder="Телефон"
+                      />
+                      <input
+                        class="fs18 br-10"
+                        type="email"
+                        placeholder="E-mail"
+                      />
+                      <textarea
+                        class="fs18 br-10"
+                        name="comment"
+                        placeholder="Комментарий к заказу"
+                      ></textarea>
+                      <button class="fs18 br-10 btn c-white b-0 db">
+                        Заказать уборку
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="description pt100 pr">
+      <div class="container">
+        <h4 class="title">
+          <span></span>
+          Услуги
+        </h4>
+        <h3 class="page-title fs48 pt25 pb50">Как мы работаем</h3>
+        <div class="row">
+          <div class="description-item col-4 tac">
+            <div class="description-item-img br-1000">
+              <img
+                src="./images/vectors/description-vector-1.svg"
+                alt="description-vector"
+              />
+            </div>
+            <h5 class="fs24">Легкое заполнение заявки</h5>
+            <p>
+              Обратившись в нашу клининговую компанию вы получите клининговые
+              услуги на высочайшем уровне, и индивидуальный подход к каждому
+              клиенту.
+            </p>
+          </div>
+          <span class="description-arrow-vector pa"
+            ><img src="./images/vectors/arrow-large.svg" alt="arrow"
+          /></span>
+          <div class="description-item col-4 tac">
+            <div class="description-item-img br-1000">
+              <img
+                src="./images/vectors/description-vector-2.svg"
+                alt="description-vector"
+              />
+            </div>
+            <h5 class="fs24">Выезд к вам и уборка</h5>
+            <p>
+              Обратившись в нашу клининговую компанию вы получите клининговые
+              услуги на высочайшем уровне, и индивидуальный подход к каждому
+              клиенту.
+            </p>
+          </div>
+          <span class="description-arrow-vector pa"
+            ><img src="./images/vectors/arrow-large.svg" alt="arrow"
+          /></span>
+          <div class="description-item col-4 tac">
+            <div class="description-item-img br-1000">
+              <img
+                src="./images/vectors/description-vector-3.svg"
+                alt="description-vector"
+              />
+            </div>
+            <h5 class="fs24">Наслаждаетесь результатом</h5>
+            <p>
+              Обратившись в нашу клининговую компанию вы получите клининговые
+              услуги на высочайшем уровне, и индивидуальный подход к каждому
+              клиенту.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="./js/scripts.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
   </body>
 </html>
