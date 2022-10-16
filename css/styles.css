@@ -238,6 +238,9 @@ form.calculator fieldset select,input,textarea{
 .calculator-result-content fieldset button {
     margin: 12px auto;
 }
+.description {
+    margin-top: 200px;
+}
 .description-item-img {
     padding: 35px;
     box-shadow: 3px -2px 6px rgba(34, 17, 85, 0.25);
@@ -267,7 +270,15 @@ form.calculator fieldset select,input,textarea{
 .description-arrow-vector-right{
     right: 25%;
 }
-
+.work-slider .slick-btn {
+    bottom: -70px;
+}
+.work-slider .slick-prev {
+    left: 38%;
+}
+.work-slider .slick-next {
+    right: 38%;
+}
 .work-slider-item h5{
     font-weight: 600;
     line-height: 122.02%;
@@ -351,7 +362,7 @@ form.calculator fieldset select,input,textarea{
     background-color: #4A72FF;
     height: 100%;
     padding: 68px 33px;
-    background-image: url(/images/content/calculator-lite-bg.png);
+    background-image: url('../images/content/calculator-lite-bg.png');
     background-position: bottom left;
     background-repeat: no-repeat;
     border-radius: 16px 0px 0px 16px;
@@ -395,17 +406,17 @@ form.calculator fieldset select,input,textarea{
     background-repeat: no-repeat;
 }
 .name-input-wrapper::after {
-    background-image: url(/images/vectors/person.svg);
+    background-image: url('../images/vectors/person.svg');
     height: 18.57002067565918px;
     width: 14.666666984558105px;
 }
 .phone-input-wrapper::after {
-    background-image: url(/images/vectors/phone.svg);
+    background-image: url('../images/vectors/phone.svg');
     height: 20px;
     width: 11px;
 }
 .email-input-wrapper::after {
-    background-image: url(/images/vectors/mail.svg);
+    background-image: url('../images/vectors/mail.svg');
     height: 15.125px;
     width: 19.25px;
     
@@ -422,6 +433,15 @@ form.calculator fieldset select,input,textarea{
 
 .about-us {
     margin-top: 150px;
+}
+.about-us-slider .slick-btn {
+    bottom: -70px;
+}
+.about-us-slider .slick-prev {
+    left: 38%;
+}
+.about-us-slider .slick-next {
+    right: 38%;
 }
 .about-us-slide{
     margin-top: 34px;
@@ -503,17 +523,35 @@ form.calculator fieldset select,input,textarea{
     left: 0;
     bottom: -92px;
 }
-
+.team-slider .slick-dots {
+    position: absolute;
+    bottom: -32px;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.team-slider .slick-dots li button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #4A72FF;
+    font-size: 0;
+    margin-right: 12px;
+}
+.team-slider .slick-dots .slick-active button {
+    background: #4A72FF;
+}
 .team-circles {
     right: 0;
-    top: -52px;
+    top: 0;
 }
 .team-item img{
     filter: drop-shadow(2px 2px 5px rgba(92, 84, 136, 0.25));
     padding-bottom: 16px;
 }
 .team-info {
-    background-image: url(/images/vectors/team-info-vector-bg.svg);
+    background-image: url('../images/vectors/team-info-vector-bg.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -551,6 +589,35 @@ form.calculator fieldset select,input,textarea{
 .reviews-vector {
     margin: 34px auto; 
 
+}
+.reviews-slider .slick-dots {
+    position: absolute;
+    bottom: -32px;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.reviews-slider .slick-dots li button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #4A72FF;
+    font-size: 0;
+    margin-right: 12px;
+}
+.reviews-slider .slick-dots .slick-active button {
+    background: #4A72FF;
+}
+.reviews-slider .slick-btn {
+    top: 50%;
+    transform: translateX(-50%);
+}
+.reviews-slider .slick-prev {
+    left: -5%;
+}
+.reviews-slider .slick-next {
+    right: -5%;
 }
 .reviews-btn {
     margin: 0 auto;
@@ -614,4 +681,9 @@ form.calculator fieldset select,input,textarea{
 }
 .footer p {
     margin-top: 24px;
+}
+
+.slick-btn {
+    background:transparent;
+    z-index: 30;
 }
