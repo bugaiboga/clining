@@ -303,7 +303,7 @@ form.calculator-form fieldset #room-size{
     position: absolute;
     width: 125px;
     height: 45px;
-    background: url('/images/vectors/arrow-large.svg');
+    background: url('../images/vectors/arrow-large.svg');
     top: 25%;
     transform: translate(50%);
     left: -25%;
