@@ -26,6 +26,20 @@ header ul li a{
     font-weight: 500;
     line-height: 19px;
 }
+.menu-burger {
+    background: transparent;
+    width: 44px;
+    display: none;
+}
+.menu-burger hr{
+    width: 100%;
+    height: 3px;
+    background: #202020;
+    margin-bottom: 5px;
+}
+.menu-burger hr + hr{
+    margin-top: 5px;
+}
 .phone {
     font-weight: 600;
     line-height: 19px;
@@ -115,7 +129,7 @@ header ul li a{
     justify-content: space-between;
 }
 .circles-column {
-    width: 60px;
+    width: 66px;
 }
 .circles-aqua span{
     background: #99F3FF;
@@ -133,11 +147,12 @@ header ul li a{
     background-size: 276px;
     background-position: center 5px;
     padding-top: 140px;
+    margin-bottom: 20px;
 }
 .services-item{
     box-shadow: 2px 4px 11px 3px rgba(136, 136, 156, 0.25);
 }
-.services-item h6 {
+.services-item h4 {
     font-weight: 600;
 }
 .services-item-list{
@@ -145,11 +160,13 @@ header ul li a{
     padding-left: 58px;
     padding-bottom: 24px;
     padding-right: 10px;
+    width: 100%;
+    overflow-x: hidden;
 }
 .services-item-list li + li {
     margin-top: 12px;
 }
-.services-item-list li a  img{
+.services-item-list li a img{
     margin-left: 8px;
     line-height: 122.02%;
 }
@@ -157,21 +174,30 @@ header ul li a{
     transition: all .3s ease;
     margin-left: 10px;
 }
-.calculator-wrappeer{
+.calculator-wrapper{
     box-shadow: 2px 4px 11px 4px rgba(136, 136, 156, 0.25);
     padding-top: 56px;
 }
 
-form.calculator fieldset labeL {
+form.calculator-form fieldset labeL {
     font-weight: 600;
     margin-bottom: 24px;
 }
-form.calculator fieldset select,input,textarea{
+form.calculator-form fieldset select,textarea{
     padding-top: 16px;
     padding-bottom: 15px;
     padding-left: 24px;
     padding-right: 22px;
     border-color: #C8C8C8;
+}
+form.calculator-form fieldset #room-size{
+    padding: 15px 22px;
+    border-color: #C8C8C8;
+    margin-top: 16px;
+    width: 100%;
+}
+.calculator-list {
+    padding-right: 14px;
 }
 .calculator-list li + li {
     margin-top: 8px;
@@ -203,6 +229,10 @@ form.calculator fieldset select,input,textarea{
     z-index: 0;
     border-radius: 0% 10% 10% 0%;
 }
+
+.calculator-list li b {
+    font-weight: 400;
+}
 .calculator-list-subtitle {
     margin: 48px auto;
     font-weight: 600;
@@ -212,12 +242,19 @@ form.calculator fieldset select,input,textarea{
     font-weight: 600;
     background: #4A72FF;
     border-radius: 10px 10px 0px 0px;
+    margin-bottom: 14px;    
+
 }
-.calculator-result-content {
+.calculator-result {
     box-shadow: 2px 4px 11px 4px rgba(136, 136, 156, 0.25);
     border-radius: 10px;
-    padding: 32px 12px;
     border-radius: 0px 0px 10px 10px;
+}
+.calculator-result-content ul {
+    padding: 10px;
+}
+.calculator-result-feedback{
+    padding: 10px;
 }
 .calculator-result-content ul li + li {
     margin-top: 12px;
@@ -228,14 +265,15 @@ form.calculator fieldset select,input,textarea{
     color: #4A72FF;
     margin-top: 24px;
 }
-.calculator-result-content fieldset input,textarea {
+.calculator-result-feedback fieldset input,textarea {
     width: 100%;
     border: 1px solid #C8C8C8;
     outline: inherit;
     margin-bottom: 12px;
     resize: none;
+    padding: 15px 24px;
 }
-.calculator-result-content fieldset button {
+.calculator-result-feedback fieldset button {
     margin: 12px auto;
 }
 .description {
@@ -257,18 +295,20 @@ form.calculator fieldset select,input,textarea{
 .description-item h5 {
     margin-top: 24px;
     margin-bottom: 16px;
-    font-weight: 600;
+    font-weight: 600; 
     line-height: 122.02%;
 }
-.description-arrow-vector {
-    top: 50%;
-    transform: translateY(-50%);
-} 
-.description-arrow-vector-left{
-    left: 30%;
-}
-.description-arrow-vector-right{
-    right: 25%;
+.description-item + .description-item::before {
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 45px;
+    background: url('/images/vectors/arrow-large.svg');
+    top: 25%;
+    transform: translate(50%);
+    left: -25%;
+    background-size: cover;
+
 }
 .work-slider .slick-btn {
     bottom: -70px;
@@ -312,11 +352,23 @@ form.calculator fieldset select,input,textarea{
     top: -80px;
     right: 0;
 }
+.work-gallery-circles-top {
+    top: -80px;
+    left: 0;
+}
+.work-gallery-circles-left {
+    top: -80px;
+    left: -30000px;
+    z-index: -3;
+}
+
+
+
 .gallery::after,
 .gallery::before {
     content: "";
     position: absolute;
-    background-image: url('/images/vectors/work-gallery-bg.svg');
+    background-image: url('../images/vectors/work-gallery-bg.svg');
     background-repeat: no-repeat;
     background-size: cover;
   
@@ -377,6 +429,7 @@ form.calculator fieldset select,input,textarea{
     right: 0;
     bottom: -109px;
     font-size: 64px;
+    font-weight: 700;
 }
 .calculator-lite-form {
     padding-left: 48px;
@@ -446,7 +499,7 @@ form.calculator fieldset select,input,textarea{
 .about-us-slide{
     margin-top: 34px;
 }
-.about-us-slide::after {
+.about-us-slide-wrapper::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -454,7 +507,7 @@ form.calculator fieldset select,input,textarea{
     background: #BABABA;
     top: 50%;
 }
-.about-us-slide::before {
+.about-us-slide-wrapper::before {
     content: "";
     position: absolute;
     width: 1px;
@@ -515,12 +568,14 @@ form.calculator fieldset select,input,textarea{
     font-weight: 500;
     line-height: 122.02%;
 }
-.info-circles-top {
-    right: 0;
+.info-circles-top, 
+.feedback-circles-top {
+    right: 30px;
     top: -92px;
 }
-.info-circles-bottom  {
-    left: 0;
+.info-circles-bottom,
+.feedback-circles-bottom   {
+    left: 30px;
     bottom: -92px;
 }
 .team-slider .slick-dots {
@@ -547,8 +602,9 @@ form.calculator fieldset select,input,textarea{
     top: 0;
 }
 .team-item img{
+    margin-bottom: 16px;
     filter: drop-shadow(2px 2px 5px rgba(92, 84, 136, 0.25));
-    padding-bottom: 16px;
+    box-shadow: 4px 2px 33px 1px rgba(110, 107, 255, 0.25);
 }
 .team-info {
     background-image: url('../images/vectors/team-info-vector-bg.svg');
@@ -578,8 +634,22 @@ form.calculator fieldset select,input,textarea{
     background: #4A72FF;
     margin-right: 12px;
 }
+
 .faq-btn {
     margin: 50px auto 0 auto;
+}
+.faq-gallery::after {
+    right: 50px;
+    bottom: 15px;
+}
+.faq-gallery-circles-left {
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.faq-gallery-circles-right {
+    top: -80px;
+    right: 0;
 }
 .faq-gallery-item-first {
     bottom: -80px;
@@ -682,8 +752,10 @@ form.calculator fieldset select,input,textarea{
 .footer p {
     margin-top: 24px;
 }
-
 .slick-btn {
     background:transparent;
     z-index: 30;
+}
+.d-opasity {
+    opacity: 1;
 }
